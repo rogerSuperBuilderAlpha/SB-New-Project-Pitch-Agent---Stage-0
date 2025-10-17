@@ -21,8 +21,8 @@ It's like Khan Academy meets GitHub Copilot, but with real product launches and 
 
 ### School Category (Required)
 **Target Alpha School:**
-- [x] Alpha School (our pilot school)
-- [ ] Sister schools: Parent-pay enrichment programs and private high schools with entrepreneurial focus
+- [x] Alpha School (our pilot school, confirmed twenty-student pilot starting spring two thousand twenty-five)
+- [x] Sister schools: Delta Parent-Pay Enrichment Programs (after-school enrichment programs, weekend academies, and private enrichment providers that charge parents directly and focus on entrepreneurial or technical skills development)
 
 ---
 
@@ -48,7 +48,7 @@ Cohorts of ten to one hundred students per program cycle
 ### Exclusion Rules
 
 **Grades or subjects out of scope:**
-- Middle school students (grades six through eight) - lack maturity for self-directed technical work
+- Middle school students (grades six through eight, ages eleven to thirteen) - excluded because self-directed technical work requires executive function skills that develop reliably by age fourteen: planning multi-day projects independently, debugging without immediate adult support, and managing tool setup across multiple platforms (GitHub, Cursor, Vercel). These skills are inconsistent before age fourteen based on developmental cognitive research.
 - College students - different learning context and needs
 - Students already proficient in web development - not the right starting point
 
@@ -96,7 +96,7 @@ Students master professional web development workflows and independently build a
 Web-based platform accessible via any browser, integrated with GitHub for authentication and project management.
 
 **How will students access it on day one at your alpha school?**
-Students visit our website and begin immediately without login. First action is setting up their GitHub account (guided walkthrough). Once GitHub is set up, students authenticate with GitHub OAuth to access the platform. From there, they set up Cursor (AI coding assistant) and Vercel (deployment platform), then begin their first project (personal landing page). The entire setup flow takes thirty to sixty minutes on day one.
+Students visit our website where they see a three-minute demo video showing what they will build (no login required to watch the demo). To start building, they click "Begin Setup" and complete a guided thirty to forty minute flow: (1) create a GitHub account with our step-by-step walkthrough (ten minutes), (2) authenticate our platform with GitHub OAuth (two minutes), (3) install Cursor desktop app and connect Vercel via browser with guided instructions (twenty minutes). Once setup is complete, students immediately begin their first project (personal landing page).
 
 **Are there any integration blockers?**
 None at Alpha School. Students need ability to:
@@ -133,49 +133,66 @@ All tools we use offer free tiers for students. No school IT integration, no LMS
 ### 4. How you will measure it (Measurement Plan)
 **Measurement plan:**
 
-**Automated GitHub analysis:**
-- AI-powered code review (using Claude-like analysis) evaluates commit quality, code structure, proper version control usage, and development workflow
-- Automated tracking of deployment success (projects must be live on Vercel)
-- Commit frequency and meaningful progress indicators
+**Primary metric: Technical Rubric Score**
 
-**Human mentor review:**
-- Weekly portfolio reviews against technical rubric covering four dimensions: functionality, code quality, deployment success, workflow proficiency
-- Review of student screen recordings showing their development process in action
-- Weekly surveys completed after each project to assess understanding and identify blockers
+Our single primary outcome metric is the average technical rubric score across all four projects. Each project is scored by a human mentor using a one hundred point rubric with four dimensions (twenty-five points each):
 
-**Portfolio submission:**
-- Students must complete and deploy all four projects within thirty days
-- Each project must be live on the internet with working functionality
-- Screen recordings demonstrate proper use of GitHub, Cursor, and Vercel workflows
+1. **Functionality (twenty-five points):**
+   - All features work without errors (25 pts)
+   - Minor bugs present but core features functional (15 pts)
+   - Major functionality issues or broken features (5 pts)
+   - Project does not work (0 pts)
 
-**Technical rubric criteria:**
-1. **Functionality (twenty-five points):** Does the deployed project work as intended? All features functional?
-2. **GitHub Proficiency (twenty-five points):** Meaningful commits, proper workflow, clean repository structure
-3. **Deployment Success (twenty-five points):** Successfully deployed to Vercel, accessible via public URL, no broken links
-4. **Workflow Mastery (twenty-five points):** Screen recording shows proper use of tools, debugging, iteration process
+2. **GitHub Proficiency (twenty-five points):**
+   - At least ten meaningful commits with clear messages, proper workflow, clean repo (25 pts)
+   - Five to nine commits with acceptable messages and workflow (15 pts)
+   - Fewer than five commits or vague messages like "fixed stuff" (5 pts)
+   - No proper Git usage (0 pts)
+
+3. **Deployment Success (twenty-five points):**
+   - Live on Vercel, loads in under three seconds, no broken links (25 pts)
+   - Deployed but has minor issues (slow loading or some broken links) (15 pts)
+   - Deployed but major issues (mostly broken) (5 pts)
+   - Not deployed or completely broken (0 pts)
+
+4. **Workflow Mastery (twenty-five points):**
+   - Screen recording shows proper debugging, iteration, effective tool use (25 pts)
+   - Partial workflow shown but some gaps (15 pts)
+   - Minimal workflow or just copying code without understanding (5 pts)
+   - No evidence of proper workflow (0 pts)
+
+**Scoring process:**
+- Students must complete all four projects within thirty days to receive a score
+- Students who do not complete all four projects automatically score zero
+- Each student's final score is the average of their four project scores
+- The cohort success rate is calculated as the percentage of students achieving seventy-five points or higher average
+
+**Supporting evidence (not separate metrics):**
+- AI-powered GitHub analysis automatically flags issues (vague commit messages like "fixed stuff," missing proper workflow, poor code structure) to help mentors score dimension 2 (GitHub Proficiency) more quickly. Example: AI flags commits named "update" or "changes" as needing improvement.
+- Weekly surveys identify blockers but do not affect scoring
+- Screen recordings are required for dimension 4 (Workflow Mastery) scoring
 
 **Sample size:** Twenty to one hundred students per cohort at Alpha School
-
-**Delayed validation (optional but valuable):**
-Seven days after program completion, students receive a surprise challenge: "Build and deploy a new landing page for a fictional client within three hours." This tests whether skills stuck or were just short-term memorization.
 
 ---
 
 ### 5. What counts as success (Decision Thresholds)
 
+**The single decision metric:** Percentage of students who achieve an average rubric score of seventy-five points or higher across all four projects.
+
 **Green (Success):**
-At least eighty percent of students complete and deploy all four projects within thirty days with average technical rubric score of at least seventy-five percent (seventy-five out of one hundred points). All projects must be live and functional.
+At least eighty percent of students achieve an average rubric score of seventy-five points or higher across all four projects within thirty days. (Students who do not complete all four projects score zero and count toward the failure rate.)
 
 **Yellow (Needs More Work):**
-Sixty to seventy-nine percent of students complete all four projects within thirty days OR average technical rubric scores fall between sixty and seventy-four percent. Some projects may have minor functionality issues but are deployed.
+Sixty to seventy-nine percent of students achieve an average rubric score of seventy-five points or higher.
 
 **Red (Not Acceptable):**
-Fewer than sixty percent of students complete all four projects within thirty days OR average technical rubric scores fall below sixty percent. Projects are not deployed or have major functionality failures.
+Fewer than sixty percent of students achieve an average rubric score of seventy-five points or higher.
 
 ---
 
 ### Complete Statement
-Our primary outcome is proficiency in professional web development workflows, measured by students' ability to independently use GitHub, Cursor, and Vercel to build and ship functional web applications. We aim to take students from zero coding experience to independently building and deploying four functional web projects of increasing complexity (personal site, simple app, business landing page, marketing funnel) within thirty days of program start. We will measure this through AI-powered GitHub analysis evaluating code quality and workflow, human mentor reviews using a technical rubric covering functionality, GitHub proficiency, deployment success, and workflow mastery, weekly surveys, and portfolio submission of all four deployed projects with screen recordings. We will consider this successful if at least eighty percent of students complete all four projects within thirty days with average technical rubric scores of at least seventy-five percent, needs more work if sixty to seventy-nine percent complete projects or scores fall between sixty and seventy-four percent, and not acceptable if fewer than sixty percent complete projects or scores fall below sixty percent.
+Our primary outcome is proficiency in professional web development workflows, measured by average technical rubric scores across four deployed projects. We aim to take students from zero coding experience to independently building and deploying four functional web projects of increasing complexity (personal site, simple app, business landing page, marketing funnel) within thirty days. We will measure this using a one hundred point rubric with four dimensions (functionality, GitHub proficiency, deployment success, workflow mastery) scored by human mentors, with AI-powered GitHub analysis providing supporting evidence for Git-related scoring. We will consider this successful if at least eighty percent of students achieve an average rubric score of seventy-five points or higher, needs more work if sixty to seventy-nine percent achieve seventy-five points or higher, and not acceptable if fewer than sixty percent achieve seventy-five points or higher.
 
 ---
 
@@ -203,9 +220,9 @@ Our primary outcome is proficiency in professional web development workflows, me
 ---
 
 ### Assumption / Risk 4: Mentor Scalability
-**What we assume:** Human mentors can support ten to fifteen students each with two to three hours per week of review time, with AI-powered GitHub analysis handling the bulk of code review.
+**What we assume:** One human mentor can support ten to fifteen students with a total of three to four hours per week across all students (approximately fifteen to twenty minutes per student per week), with AI-powered GitHub analysis handling the bulk of code review and flagging issues for human attention.
 
-**How we will test it:** In the pilot phase we will track mentor time logs and support requests. If mentors consistently exceed three hours per week per ten students OR response times exceed twenty-four hours, we know we need more automation. Mitigation: We will expand AI-powered feedback to cover more common issues (deployment errors, GitHub workflow mistakes) and create a peer review system where advanced students help beginners with basic questions. We will measure mentor load weekly and adjust support ratios by week four.
+**How we will test it:** In the pilot phase we will track mentor time logs and support requests. If any mentor consistently exceeds four hours per week total for their cohort of ten to fifteen students, OR if response times exceed twenty-four hours, we know we need more automation. Mitigation: We will expand AI-powered feedback to cover deployment errors and GitHub workflow mistakes automatically, and create a peer review system where advanced students help beginners with basic questions. We will measure mentor load weekly and adjust support ratios by week four.
 
 ---
 
